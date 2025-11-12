@@ -3,31 +3,20 @@ owner: alexanderhodes # Your GitHub organization or username, where this reposit
 repo: upptime-demo # The name of this repository
 
 sites:
-#  - name: Google
-#    url: https://www.google.com
-#  - name: Wikipedia
-#    url: https://en.wikipedia.org
-#  - name: Hacker News
-#    url: https://news.ycombinator.com
-  - name: Vercel Status
-    url: https://www.vercel-status.com
-  - name: Vercel API Status
-    url: https://www.vercel-status.com/api/v2/status.json
-    expectedStatusCodes:
-      - 200
-  - name: Vercel System Health
+  - name: Hosting Services
     url: https://www.vercel-status.com/api/v2/summary.json
     __dangerous__body_down_if_text_missing: '"indicator":"none"'
-  - name: Vercel Incident Check
-    url: https://www.vercel-status.com/api/v2/summary.json  
-    __dangerous__body_down: '"indicator":"major"'
-  - name: Trigger.dev Status
-    url: https://status.trigger.dev
-  - name: Trigger.dev Incidents Check
+    __dangerous__body_degraded: '"indicator":"minor"'
+    maxResponseTime: 8000
+  - name: Background Services
     url: https://status.trigger.dev
     __dangerous__body_down_if_text_missing: "All services are online"
-    __dangerous__body_down_if_text_includes: "incident"
     maxResponseTime: 10000
+  - name: Database Services
+    url: https://neonstatus.com/aws-us-east-n-virginia
+    __dangerous__body_down_if_text_missing: "We're fully operational"
+    __dangerous__body_degraded_if_text_missing: "operational"
+    maxResponseTime: 8000
 #  - name: Test Broken Site
 #    url: https://thissitedoesnotexist.koj.co
 #  - name: IPv6 test
