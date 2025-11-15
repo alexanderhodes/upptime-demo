@@ -35,6 +35,7 @@ status-website:
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   cname: status.alexanderhodes.de
   #baseUrl: /upptime-demo
+  favicon: https://raw.githubusercontent.com/alexanderhodes/upptime-demo/refs/heads/master/icon.png
   logoUrl: https://raw.githubusercontent.com/alexanderhodes/upptime-demo/refs/heads/master/icon.png
   name: Status
   theme: light
