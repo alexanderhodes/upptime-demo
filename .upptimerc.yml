@@ -35,7 +35,7 @@ status-website:
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   cname: status.alexanderhodes.de
   #baseUrl: /upptime-demo
-  logoUrl: icon.png
+  logoUrl: ./icon.png
   name: Status
   theme: light
   introTitle: "Das ist die Status-Seite von **Isar Labs**, die auf **Upptime** basiert."
