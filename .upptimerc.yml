@@ -23,8 +23,10 @@ sites:
     maxResponseTime: 15000
   - name: Neon (third party)
     url: https://neonstatus.com/aws-us-east-n-virginia
-    __dangerous__body_down_if_text_missing: "We're fully operational"
-    __dangerous__body_degraded_if_text_missing: "operational"
+    __dangerous__body_down: "major outage"
+    __dangerous__body_degraded: "degraded performance"
+    expectedStatusCodes:
+      - 200
     maxResponseTime: 15000
 
 assignees: # Users to assign downtime issues (optional)
